@@ -1,0 +1,20 @@
+<div class="flex flex-col gap-2 py-2 px-6">
+    <span class="block text-2xl font-bold">{{data.title}}</span>
+    <p class="text-sm font-semibold">{{data.description}}</p>
+    <form [formGroup]="updateTodoForm" class="flex items-center justify-start">
+        <select formControlName="status" class="outline-none py-1 px-2 border-[1px] border-[#BFC4D7] rounded-md" type="text" placeholder="Select a type">
+            <option value="" selected disabled>
+                <span class="text-color-secondary">Status:</span>
+            </option>
+            <option value="pending">Pending</option>
+            <option value="progress">In progress</option>
+            <option value="dones">Done</option>
+        </select>
+    </form>
+    <div class="flex items-center justify-end gap-3">
+        <button mat-dialog-close class="py-1 px-4 rounded-md shadow-md bg-red-600 text-white active:top-[1px] relative">Close</button>
+        <button type="submit" (click)="getStatusTodo()" [ngClass]="false ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 active:top-[1px]'" class="py-1 px-4 rounded-md shadow-md text-white relative">Save</button>
+        <!-- [disabled]="addNewTodoForm.invalid"
+            [ngClass]="addNewTodoForm.invalid ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 active:top-[1px]'" -->
+    </div>
+</div>

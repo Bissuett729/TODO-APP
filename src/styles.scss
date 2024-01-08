@@ -1,1 +1,142 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+
+$TODO-primary: mat.define-palette(mat.$indigo-palette);
+$TODO-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$TODO-warn: mat.define-palette(mat.$red-palette);
+$TODO-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $TODO-primary,
+      accent: $TODO-accent,
+      warn: $TODO-warn,
+    ),
+  )
+);
+@include mat.all-component-themes($TODO-theme);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "remixicon/fonts/remixicon.css";
+
+@font-face {
+  font-family: Mulish;
+  src: url("./assets/fonts/Mulish-VariableFont_wght.ttf") format("truetype");
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Mulish;
+
+  --mdc-dialog-container-color: #ffffff;
+}
+
+//TODO <-------- C O N T E N T - S T Y L E ------------->
+.todo-content-container {
+  @apply flex flex-col;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+@media screen and (max-width: 767px) {
+  .content-full {
+    margin-left: 80%;
+  }
+  .content-close {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content-full {
+    margin-left: 250px;
+  }
+  .content-close {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .content-full {
+    margin-left: 250px;
+  }
+  .content-close {
+    margin-left: 0;
+  }
+}
+
+// N A V B A R
+.todo-input-search {
+  @apply flex items-center gap-2;
+  .todo-input-search-icon,
+  input {
+    color: #a5a5a5;
+  }
+  input {
+    @apply font-semibold text-sm;
+  }
+  input::placeholder,
+  .todo-input-search-icon {
+    @apply font-bold text-sm;
+  }
+}
+
+//TODO <-------- S I D E B A R - S T Y L E ------------->
+.todo-sidebar-container {
+  height: 100%;
+  position: absolute;
+  box-shadow: 5px 0px 11px 3px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 767px) {
+  .todo-sidebar-container {
+    width: 80%;
+  }
+  .sidebar-open {
+    @apply left-0;
+  }
+  .sidebar-close {
+    @apply -left-[100%];
+  }
+}
+@media screen and (min-width: 1024px) {
+  .todo-sidebar-container {
+    width: 250px;
+  }
+  .sidebar-open {
+    @apply left-0;
+  }
+  .sidebar-close {
+    @apply -left-[250px];
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .todo-sidebar-container {
+    width: 250px;
+  }
+  .sidebar-open {
+    @apply left-0;
+  }
+  .sidebar-close {
+    @apply -left-[250px];
+  }
+}
+.todo-sidebar-nav-button {
+  @apply flex items-center gap-2 py-1 pr-4 pl-12 cursor-pointer w-full;
+  color: #a5a5a5;
+  &.active {
+    background-color: #ecf4fd !important;
+    color: #000000;
+  }
+  &:hover {
+    background-color: #ecf4fd;
+  }
+}
+
+//TODO <-------- C O L O R S ------------->
+.text-color-primary {
+  color: #080808;
+}
+.text-color-secondary {
+  color: #a5a5a5;
+}

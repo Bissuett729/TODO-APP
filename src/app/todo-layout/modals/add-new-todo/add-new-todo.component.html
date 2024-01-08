@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center gap-6 p-4">
+    <span class="text-xl font-bold text-color-primary">Add new todo</span>
+    <form class="flex flex-col gap-2" [formGroup]="addNewTodoForm">
+        <select formControlName="type" class="outline-none py-1 px-2 border-[1px] border-[#BFC4D7] rounded-md" type="text" placeholder="Select a type">
+            <option value="" selected disabled>
+                <span class="text-color-secondary">Select type:</span>
+            </option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+        <input formControlName="title" class="outline-none py-1 px-2 border-[1px] border-[#BFC4D7] rounded-md" type="text" placeholder="Title:">
+        <input formControlName="description" class="outline-none py-1 px-2 border-[1px] border-[#BFC4D7] rounded-md" type="text" placeholder="Description:">
+    </form>
+    <div class="flex items-center gap-4 relative">
+        <button mat-dialog-close class="py-1 px-4 rounded-md shadow-md bg-red-600 text-white active:top-[1px] relative">Close</button>
+        <button type="submit" [disabled]="addNewTodoForm.invalid" [ngClass]="addNewTodoForm.invalid ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 active:top-[1px]'" (click)="getAllDataFromForm()" class="py-1 px-4 rounded-md shadow-md text-white relative">Save</button>
+    </div>
+</div>

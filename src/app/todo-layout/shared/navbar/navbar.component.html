@@ -1,0 +1,20 @@
+<div class="flex items-center justify-between h-full px-10 relative">
+    <div class="relative flex items-center justify-center">
+        <button (click)="changeModeSidebar()" class="absolute z-[999999] py-2 px-3 transition-all duration-300 bg-[#ececf4] rounded-md">
+            @if (_SidebarOpen()) {
+                <i class="ri-close-fill" matTooltip="Close sidebar" matTooltipPosition="after"></i>
+            } @else {
+                <i class="ri-menu-line" matTooltip="Open sidebar" matTooltipPosition="after"></i>
+            }
+        </button>
+    </div>
+    <!-- <div class="todo-input-search">
+        <i class="ri-search-2-line todo-input-search-icon"></i>
+        <input type="search" placeholder="Search" class="outline-none">
+    </div> -->
+    <div class="flex items-center gap-4 relative">
+        <button class="text-xl" matTooltip="Notification" matTooltipPosition="above"><i class="ri-notification-2-line"></i></button>
+        <button class="text-xl" matTooltip="Help" matTooltipPosition="above"><i class="ri-question-line"></i></button>
+        <button class="bg-cover bg-center bg-no-repeat image w-6 h-6 rounded-[50%]" style="background-image: url('./assets/yo.jpeg');" matTooltip="Profile" matTooltipPosition="above"></button>
+    </div>
+</div>

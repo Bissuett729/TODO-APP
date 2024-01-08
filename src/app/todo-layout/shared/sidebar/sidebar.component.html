@@ -1,0 +1,23 @@
+<div 
+class="todo-sidebar-container flex flex-col justify-between py-4 transition-all duration-300 w-full" 
+[ngClass]="_SidebarOpen() ? 'sidebar-open' : 'sidebar-close'">
+    <div class="flex flex-col gap-6">
+        <div class="flex items-center justify-center gap-2">
+            <span class="font-extrabold text-lg tracking-widest">Task Manager</span>
+        </div>
+        <div class="flex flex-col gap-2 w-full">
+            @for (menu_sidebar of menus; track $index) {
+                <a [routerLink]="[menu_sidebar.link]" routerLinkActive="active" (click)="closeSidebar()" class="todo-sidebar-nav-button">
+                    <i [class]="menu_sidebar.icon"></i>
+                    <span>{{menu_sidebar.menu}}</span>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="flex items-center w-full">
+        <a class="todo-sidebar-nav-button">
+            <i class="ri-logout-box-r-line"></i>
+            <span>Log out</span>
+        </a>
+    </div>
+</div>
