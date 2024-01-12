@@ -4,11 +4,12 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddNewTodoComponent } from '../../modals/add-new-todo/add-new-todo.component';
 import { CommonModule } from '@angular/common';
 import { UpdateTodoComponent } from '../../modals/update-todo/update-todo.component';
+import { OptionTasksComponent } from '../../components/option-tasks/option-tasks.component';
 
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [CommonModule ,MatMenuModule, MatDialogModule],
+  imports: [CommonModule ,MatMenuModule, MatDialogModule, OptionTasksComponent],
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss',
 })
@@ -23,13 +24,7 @@ export class BoardComponent {
 
   constructor(public dialog: MatDialog) {}
 
-  public openAddNewTodoModal() {
-    const dialogRef = this.dialog.open(AddNewTodoComponent, {
-      closeOnNavigation: true,
-      disableClose: true,
-    });
-    dialogRef.afterClosed();
-  }
+  
   public openUpdateTodoModal(data: any) {
     const dialogRef = this.dialog.open(UpdateTodoComponent, {
       closeOnNavigation: true,
