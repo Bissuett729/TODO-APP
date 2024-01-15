@@ -34,36 +34,16 @@ body {
   --mdc-dialog-container-color: #ffffff;
 }
 
+.mat-mdc-form-field-subscript-wrapper {
+  height: 0;
+}
+
 //TODO <-------- C O N T E N T - S T Y L E ------------->
 .todo-content-container {
   @apply flex flex-col;
   position: relative;
   width: 100vw;
   height: 100vh;
-}
-@media screen and (max-width: 767px) {
-  .content-full {
-    margin-left: 80%;
-  }
-  .content-close {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .content-full {
-    margin-left: 250px;
-  }
-  .content-close {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .content-full {
-    margin-left: 250px;
-  }
-  .content-close {
-    margin-left: 0;
-  }
 }
 
 // N A V B A R
@@ -88,7 +68,25 @@ body {
   position: absolute;
   box-shadow: 5px 0px 11px 3px rgba(0, 0, 0, 0.1);
 }
+.todo-sidebar-nav-button {
+  @apply flex items-center gap-2 py-1 pr-4 pl-12 cursor-pointer w-full;
+  color: #a5a5a5;
+  &.active {
+    background-color: #ecf4fd !important;
+    color: #000000;
+  }
+  &:hover {
+    background-color: #ecf4fd;
+  }
+}
+
 @media screen and (max-width: 767px) {
+  .content-full {
+    margin-left: 80%;
+  }
+  .content-close {
+    margin-left: 0;
+  }
   .todo-sidebar-container {
     width: 80%;
   }
@@ -100,6 +98,12 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .content-full {
+    margin-left: 250px;
+  }
+  .content-close {
+    margin-left: 0;
+  }
   .todo-sidebar-container {
     width: 250px;
   }
@@ -111,6 +115,12 @@ body {
   }
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
+  .content-full {
+    margin-left: 250px;
+  }
+  .content-close {
+    margin-left: 0;
+  }
   .todo-sidebar-container {
     width: 250px;
   }
@@ -119,17 +129,6 @@ body {
   }
   .sidebar-close {
     @apply -left-[250px];
-  }
-}
-.todo-sidebar-nav-button {
-  @apply flex items-center gap-2 py-1 pr-4 pl-12 cursor-pointer w-full;
-  color: #a5a5a5;
-  &.active {
-    background-color: #ecf4fd !important;
-    color: #000000;
-  }
-  &:hover {
-    background-color: #ecf4fd;
   }
 }
 
