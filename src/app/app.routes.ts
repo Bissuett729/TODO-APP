@@ -7,6 +7,7 @@ import { SettingsComponent } from './todo-layout/pages/settings/settings.compone
 export const routes: Routes = [
     {path: '', redirectTo: 'TODO', pathMatch: 'full'},
     {path: 'TODO', component: TODOLAYOUTComponent, children: [
+        {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
         {path:'dashboard', component: DashboardComponent},
         {path:'board', component: BoardComponent},
         {path:'settings', component: SettingsComponent},

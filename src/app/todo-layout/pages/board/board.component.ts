@@ -5,11 +5,12 @@ import { AddNewTodoComponent } from '../../modals/add-new-todo/add-new-todo.comp
 import { CommonModule } from '@angular/common';
 import { UpdateTodoComponent } from '../../modals/update-todo/update-todo.component';
 import { OptionTasksComponent } from '../../components/option-tasks/option-tasks.component';
+import { TaskComponent } from '../../components/task/task.component';
 
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [CommonModule ,MatMenuModule, MatDialogModule, OptionTasksComponent],
+  imports: [CommonModule ,MatMenuModule, MatDialogModule, OptionTasksComponent, TaskComponent],
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss',
 })
