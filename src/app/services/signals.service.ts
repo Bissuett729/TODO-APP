@@ -7,8 +7,19 @@ import { toObservable } from '@angular/core/rxjs-interop';
 export class SignalsService {
   public openSidebar = signal<boolean>(false);
   public openSidebar$ = toObservable(this.openSidebar);
+  public ThemeMode = signal<string>('light');
+  public ThemeMode$ = toObservable(this.ThemeMode);
+  public userData = signal<any>([]);
+  public userData$ = toObservable(this.userData);
 
   public setOpenSidebar(statusSidebar: boolean) {
     this.openSidebar.set(statusSidebar);
+  }
+  public setUserData(userData: any) {
+    this.userData.set(userData);
+  }
+
+  setThemeMode(mode: string) {
+    this.ThemeMode.set(mode);
   }
 }

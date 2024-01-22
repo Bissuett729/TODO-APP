@@ -1,19 +1,23 @@
-<div class="w-screen h-screen flex relative overflow-hidden">
-  <app-sidebar></app-sidebar>
-  <div
-    class="todo-content-container transition-all duration-300"
-    [ngClass]="_SidebarOpen() ? 'content-full' : 'content-close'"
-  >
-    @if (_SidebarOpen()) {
-    <div class="absolute top-0 h-full w-full z-[99999] bg-[#00000033]"></div>
-    }
-    
-    <div class="h-16">
-        <app-navbar></app-navbar>
-    </div>
+@if(loadUserData) {
+  <div class="w-screen h-screen flex relative overflow-hidden">
+    <app-sidebar></app-sidebar>
+    <div
+      class="todo-content-container transition-all duration-300"
+      [ngClass]="_SidebarOpen() ? 'content-full' : 'content-close'"
+    >
+      @if (_SidebarOpen()) {
+      <div class="absolute top-0 h-full w-full z-[99999] bg-[#00000033]"></div>
+      }
+      
+      <div class="h-16">
+          <app-navbar></app-navbar>
+      </div>
 
-    <div class="overflow-y-auto py-3" style="height: calc(100vh - 64px);">
-        <app-outlet></app-outlet>
+      <div class="py-3" style="height: calc(100vh - 64px);">
+          <app-outlet></app-outlet>
+      </div>
     </div>
-  </div>
 </div>
+} @else () {
+  <p>Loading page...</p>
+}

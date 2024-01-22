@@ -1,9 +1,9 @@
 <div 
-class="todo-sidebar-container flex flex-col justify-between py-4 transition-all duration-300 w-full" 
+class="todo-sidebar-container flex flex-col justify-between py-4 transition-all duration-300 w-full bg-sidebar" 
 [ngClass]="_SidebarOpen() ? 'sidebar-open' : 'sidebar-close'">
     <div class="flex flex-col gap-6">
         <div class="flex items-center justify-center gap-2">
-            <span class="font-extrabold text-lg tracking-widest">Task Manager</span>
+            <span class="font-extrabold text-lg tracking-widest text-primary">Task Manager</span>
         </div>
         <div class="flex flex-col gap-2 w-full">
             @for (menu_sidebar of menus; track $index) {

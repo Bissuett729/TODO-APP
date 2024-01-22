@@ -1,14 +1,14 @@
 <div class="flex items-center justify-between">
-    <span class="font-bold text-sm text-color-primary">{{ title }}</span>
+    <span class="font-bold text-sm text-primary">{{ title }}</span>
     <div class="flex items-center gap-2">
         @if (showButtonAdd) {
-            <button (click)="openAddNewTodoModal()"><i class="ri-add-line"></i></button>
+            <button (click)="openAddNewTodoModal()" class="text-primary"><i class="ri-add-line"></i></button>
         }
-        <button [matMenuTriggerFor]="menu"><i class="ri-more-fill"></i></button>
+        <button [matMenuTriggerFor]="menu" class="text-primary"><i class="ri-more-fill"></i></button>
         <mat-menu #menu="matMenu">
-            <button (click)="handleMenuClick(2)" class="text-xs font-normal" mat-menu-item>View in list</button>
-            <button (click)="handleMenuClick(0)" class="text-xs font-normal" mat-menu-item>View extended information</button>
-            <button (click)="handleMenuClick(1)" class="text-xs font-normal" mat-menu-item>View basic information</button>
+            <button (click)="handleMenuClick(0)" class="text-xs font-normal text-primary" mat-menu-item>View in list</button>
+            <button (click)="handleMenuClick(1)" class="text-xs font-normal text-primary" mat-menu-item>View extended information</button>
+            <button (click)="handleMenuClick(2)" class="text-xs font-normal text-primary" mat-menu-item>View basic information</button>
         </mat-menu>
     </div>
   </div>

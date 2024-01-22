@@ -18,4 +18,11 @@ export class SettingsComponent {
     const dialogRef = this.dialog.open(AddMaterialComponent);
     dialogRef.afterClosed();
   }
+
+  setTheme(theme: string){
+    const root = window.document.documentElement; 
+    root.classList.remove(localStorage.getItem('themeAppTODO')!);
+    localStorage.setItem('themeAppTODO', theme);
+    root.classList.add(theme);
+  }
 }

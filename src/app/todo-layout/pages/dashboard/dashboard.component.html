@@ -1,31 +1,27 @@
 <div class="flex flex-col gap-6 px-10">
     <div class="flex items-center justify-between">
-        <span class="block text-2xl font-bold text-color-primary">Dashboard</span>
-        <button class="flex items-center gap-2">
-            <span class="text-xs font-bold">This week</span>
-            <i class="ri-arrow-down-s-line text-sm"></i>
-        </button>
+        <span class="block text-2xl font-bold text-primary">Dashboard</span>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         @for (cards_dashboard of cards_dashboards; track $index) {
-            <div class="col-span-1 rounded-md shadow-md py-2 px-4 flex flex-col gap-5 bg-[#EEF2F5]">
+            <div class="col-span-1 rounded-md shadow-md py-2 px-4 flex flex-col gap-5 card-dashboard">
                 <div class="flex items-center justify-around">
                     <div 
-                    class="text-2xl font-bold flex items-center gap-2 text-[#18B0FF]" 
-                    [ngClass]="{'text-[#18B0FF]' : $index === 0, 'text-[#FF2473]' : $index === 1, 'text-[#40A737]' : $index === 2}">
+                    class="text-2xl font-bold flex items-center gap-2" 
+                    [ngClass]="{'text-blue' : $index === 0, 'text-rose' : $index === 1, 'text-green' : $index === 2}">
                         <i [class]="cards_dashboard.icon"></i>
                         <span>{{cards_dashboard.title}}</span>
                     </div>
                     <span 
-                    class="text-4xl font-extrabold text-[#18B0FF]"
-                    [ngClass]="{'text-[#18B0FF]' : $index === 0, 'text-[#FF2473]' : $index === 1, 'text-[#40A737]' : $index === 2}">
+                    class="text-4xl font-extrabold"
+                    [ngClass]="{'text-blue' : $index === 0, 'text-rose' : $index === 1, 'text-green' : $index === 2}">
                     {{cards_dashboard.quantity}}
                     </span>
                 </div>
                 <div class="flex justify-start items-center gap-2">
                     <button [routerLink]="[cards_dashboard.link]" routerLinkActive="router-link-active"  class="flex justify-start items-center gap-2">
-                        <i class="ri-eye-line"></i>
-                        <span class="text-xs font-semibold">View all</span>
+                        <i class="ri-eye-line text-primary"></i>
+                        <span class="text-xs font-semibold text-secondary">View all</span>
                     </button>
                 </div>
             </div>

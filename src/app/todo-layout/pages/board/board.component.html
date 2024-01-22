@@ -1,13 +1,13 @@
-<div class="flex flex-col gap-6 px-10">
+<div class="flex flex-col gap-6 px-10 h-full">
     <div class="flex items-center justify-between">
-        <span class="block text-2xl font-bold text-color-primary">Board</span>
+        <span class="block text-2xl font-bold text-primary">Board</span>
         <button class="flex items-center gap-2">
-            <span class="text-xs font-bold">This week</span>
-            <i class="ri-arrow-down-s-line text-sm"></i></button>
+            <span class="text-xs font-bold text-primary">This week</span>
+            <i class="ri-arrow-down-s-line text-sm text-primary"></i></button>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto">
-        <div class="col-span-1 bg-[#EEF2F5] h-full rounded-md px-4 py-2 flex flex-col gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-[90%]">
+        <div class="col-span-1 card-board h-full rounded-md px-4 py-2 flex flex-col gap-4 overflow-y-auto">
             <app-option-tasks [showButtonAdd]="true" title="To do" (menuClick)="setModeTodo($event)"></app-option-tasks>
             <div class="flex flex-col gap-3 px-2">
                 <app-task [viewMode]="todoViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
@@ -16,21 +16,21 @@
             </div>
         </div>
 
-        <div class="col-span-1 bg-[#EEF2F5] h-full rounded-md px-4 py-2 flex flex-col gap-4">
+        <div class="col-span-1 card-board h-full rounded-md px-4 py-2 flex flex-col gap-4 overflow-y-auto">
             <app-option-tasks [showButtonAdd]="false" title="In progress" (menuClick)="setModeprogress($event)"></app-option-tasks>
             <div class="flex flex-col gap-3 px-2">
-                <app-task [viewMode]="0" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
-                <app-task [viewMode]="0" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
-                <app-task [viewMode]="0" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
+                <app-task [viewMode]="progressViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
+                <app-task [viewMode]="progressViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
+                <app-task [viewMode]="progressViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
             </div>
         </div>
 
-        <div class="col-span-1 bg-[#EEF2F5] h-full rounded-md px-4 py-2 flex flex-col gap-4">
+        <div class="col-span-1 card-board h-full rounded-md px-4 py-2 flex flex-col gap-4 overflow-y-auto">
             <app-option-tasks [showButtonAdd]="false" title="Done" (menuClick)="setModedone($event)"></app-option-tasks>
             <div class="flex flex-col gap-3 px-2">
-                <app-task [viewMode]="0" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
-                <app-task [viewMode]="0" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
-                <app-task [viewMode]="0" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
+                <app-task [viewMode]="doneViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
+                <app-task [viewMode]="doneViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
+                <app-task [viewMode]="doneViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
             </div>
         </div>
     </div>

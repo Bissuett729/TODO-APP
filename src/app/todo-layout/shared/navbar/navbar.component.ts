@@ -13,6 +13,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 export class NavbarComponent {
   public SignalsSvc = inject(SignalsService);
   public _SidebarOpen = toSignal(this.SignalsSvc.openSidebar$);
+  public _user = toSignal(this.SignalsSvc.userData$);
 
   changeModeSidebar() {
     this.SignalsSvc.setOpenSidebar(!this._SidebarOpen());

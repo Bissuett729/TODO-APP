@@ -1,70 +1,16 @@
-<!-- <div class="p-4 flex gap-4">
-    <div class="grid grid-cols-4 gap-4 w-[80%] h-full">
-        <div *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]" class="col-span-1 flex flex-col gap-2 mat-elevation-z4 rounded-md p-2">
-            <div class="flex items-center justify-center">
-                <span class="text-base font-bold">SERVER DL380 GEN 10 PLUS</span>
-            </div>
-            <div class="flex items-center justify-between px-4">
-                <div class="flex flex-col gap-1">
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm font-bold">Available quantity:</span>
-                        <span class="text-xs font-medium">1</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm font-bold">PN:</span>
-                        <span class="text-xs font-medium">PN7890123456</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm font-bold">SN:</span>
-                        <span class="text-xs font-medium">SN20240111-123456</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img class="max-h-12" src="./assets/server dl380.png" alt="">
-                </div>
-            </div>
-            <div class="flex items-center gap-2 w-full">
-                <div class="p-1 rounded-md bg-slate-200 w-[60%]">
-                    <input class="bg-inherit w-full" type="number" name="number" value="0" min="0" max="100">
-                </div>
-                <button class="relative active:top-[1px] p-2 bg-black text-white rounded-md text-xs w-[40%]">Add to cart</button>
-            </div>
-        </div>
+<div class="h-full w-full p-2">
+    <div class="flex items-center justify-start">
+        <span class="text-primary text-xl font-semibold">Set theme:</span>
     </div>
-    <div class="w-[20%] h-screen flex flex-col gap-2 px-4 border-l-[1px] border-gray-950/10">
-        <div class="flex flex-col gap-2">
-            <div class="p-2 rounded-md flex flex-col mat-elevation-z4">
-                <div class="flex items-center justify-center"><span class="text-xs font-medium">SERVER DL380 GEN 10 PLUS</span></div>
-                <div class="flex items-center gap-4">
-                    <img class="max-h-12" src="./assets/server dl380.png" alt="">
-                    <span>Quantity: 1</span>
-                </div>
-            </div>
-            <div class="p-2 rounded-md flex flex-col mat-elevation-z4">
-                <div class="flex items-center justify-center"><span class="text-xs font-medium">SERVER DL380 GEN 10 PLUS</span></div>
-                <div class="flex items-center gap-4">
-                    <img class="max-h-12" src="./assets/server dl380.png" alt="">
-                    <span>Quantity: 1</span>
-                </div>
-            </div>
-            <div class="p-2 rounded-md flex flex-col mat-elevation-z4">
-                <div class="flex items-center justify-center"><span class="text-xs font-medium">SERVER DL380 GEN 10 PLUS</span></div>
-                <div class="flex items-center gap-4">
-                    <img class="max-h-12" src="./assets/server dl380.png" alt="">
-                    <span>Quantity: 1</span>
-                </div>
-            </div>
+    <section class="grid grid-cols-3 gap-2">
+        <div class="col-span-1 rounded-lg p-1 mat-elevation-z2 card-themes-settings" (click)="setTheme('light-theme')">
+            <img class="hover:scale-[1.04] cursor-pointer w-full h-full bg-cover bg-center bg-no-repeat rounded-md" src="./assets/theme-light-todo.png" alt="theme light">
         </div>
-        <div class="flex items-center justify-center gap-2">
-            <button class="py-1 px-4 bg-red-500 text-white rounded-lg text-xs">Delete all cart</button>
-            <button class="py-1 px-4 bg-blue-500 text-white rounded-lg text-xs">Send ticket</button>
+        <div class="col-span-1 rounded-lg p-1 mat-elevation-z2 card-themes-settings" (click)="setTheme('dark-theme')">
+            <img class="hover:scale-[1.04] cursor-pointer w-full h-full bg-cover bg-center bg-no-repeat rounded-md" src="./assets/theme-dark-todo.png" alt="theme dark">
         </div>
-    </div>
-</div> -->
-
-<div class="p-4 flex gap-4">
-    <button class="bg-blue-400 py-1 px-4 rounded-md text-white" (click)="addMaterialModal()">Register material</button>
-    <button class="bg-blue-400 py-1 px-4 rounded-md text-white">Add rack</button>
-    <button class="bg-blue-400 py-1 px-4 rounded-md text-white">Register requisition</button>
-    <button class="bg-blue-400 py-1 px-4 rounded-md text-white">Others</button>
+        <div class="col-span-1 rounded-lg p-1 mat-elevation-z2 card-themes-settings" (click)="setTheme('blue-theme')">
+            <img class="hover:scale-[1.04] cursor-pointer w-full h-full bg-cover bg-center bg-no-repeat rounded-md" src="./assets/theme-blue-todo.png" alt="theme dark">
+        </div>
+    </section>
 </div>

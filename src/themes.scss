@@ -1,0 +1,233 @@
+.light-theme {
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #e0e3e6; /* Color of the scrollbar thumb */
+    border-radius: 8px;
+  }
+
+  --mdc-dialog-container-color: #ffffff;
+  --mat-menu-container-color: #ffffff;
+  .bg-pageTODO {
+    background-color: #ffffff;
+  }
+  .text-primary {
+    color: #000000;
+  }
+  .text-secondary {
+    color: #000000b9;
+  }
+  .todo-input-search {
+    .todo-input-search-icon,
+    input {
+      color: #a5a5a5;
+    }
+  }
+  .todo-sidebar-container {
+    box-shadow: 5px 0px 11px 3px rgba(0, 0, 0, 0.1);
+  }
+  .todo-sidebar-nav-button {
+    color: #a5a5a5;
+    &.active {
+      background-color: #ecf4fd !important;
+      color: #000000;
+    }
+    &:hover {
+      background-color: #ecf4fd;
+    }
+  }
+  //  TODO  DASHBOARD
+  .card-dashboard {
+    background-color: #eef2f5;
+
+    .text-blue {
+      color: #18b0ff;
+    }
+    .text-rose {
+      color: #ff2473;
+    }
+    .text-green {
+      color: #40a737;
+    }
+  }
+  //   TODO BOARD
+  .card-board {
+    background-color: #eef2f5;
+  }
+  .task-card {
+    background-color: #ffffff;
+  }
+  .modal-add-new-task {
+    input, select {
+      background-color: #ffffff;
+      @apply border-[1px] border-[#BFC4D7];
+    }
+  }
+  // TODO SETTINGS
+  .card-themes-settings {
+    background-color: #eef2f5;
+  }
+  //   TODO NAVBAR
+  .button-close-sidebar {
+    background-color: #ececf4;
+  }
+  //   TODO SIDEBAR
+  .bg-sidebar {
+    background-color: #ffffff;
+  }
+}
+
+.dark-theme {
+  --mdc-dialog-container-color: #090a0c;
+  --mdc-dialog-container-elevation-shadow: 0px 11px 15px -7px rgb(66 66 66 / 20%), 0px 24px 38px 3px rgb(11 11 11 / 14%), 0px 9px 46px 8px rgb(32 32 32 / 12%);
+  --mat-menu-container-color: #1d232b;
+  ::-webkit-scrollbar-thumb {
+    background-color: #212730; /* Color of the scrollbar thumb */
+    border-radius: 8px;
+  }
+  .bg-pageTODO {
+    background-color: #0d0f11;
+  }
+  .text-primary {
+    color: #ffffffc2;
+  }
+  .text-secondary {
+    color: #9e9e9eb9;
+  }
+  .todo-input-search {
+    .todo-input-search-icon,
+    input {
+      color: #a5a5a5;
+    }
+  }
+  //  TODO  DASHBOARD
+  .card-dashboard {
+    background-color: #191d23;
+
+    .text-blue {
+      color: #18b0ff;
+    }
+    .text-rose {
+      color: #ff2473;
+    }
+    .text-green {
+      color: #40a737;
+    }
+  }
+  //   TODO BOARD
+  .card-board {
+    background-color: #191d23;
+  }
+  .task-card {
+    background-color: #2c3543;
+  }
+
+  .modal-add-new-task {
+    input, select {
+      background-color: #18191d;
+      @apply border-[1px] border-[#1f1f1f];
+    }
+  }
+  // TODO SETTINGS
+  .card-themes-settings {
+    background-color: #191d23;
+  }
+  //   TODO NAVBAR
+  .button-close-sidebar {
+    background-color: #25292d;
+  }
+  //   TODO SIDEBAR
+  .bg-sidebar {
+    background-color: #191d23;
+  }
+  .todo-sidebar-container {
+    box-shadow: 5px 0px 11px 3px rgba(0, 0, 0, 0.1);
+  }
+  .todo-sidebar-nav-button {
+    color: #a5a5a5;
+    &.active {
+      background-color: #3d4046 !important;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #3d40465e;
+    }
+  }
+}
+
+.blue-theme {
+  --mdc-dialog-container-color: #1f2b3a;
+  --mat-menu-container-color: #2d3f55;
+
+  .modal-add-new-task {
+    input, select {
+      background-color: #233042;
+      @apply border-[1px] border-[#2e4057];
+    }
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #1f3146; /* Color of the scrollbar thumb */
+    border-radius: 8px;
+  }
+
+  .bg-pageTODO {
+    background-color: #2d3f55;
+  }
+  .text-primary {
+    color: #ffffffc2;
+  }
+  .text-secondary {
+    color: #9e9e9eb9;
+  }
+  .todo-input-search {
+    .todo-input-search-icon,
+    input {
+      color: #a5a5a5;
+    }
+  }
+  //  TODO  DASHBOARD
+  .card-dashboard {
+    background-color: #19293c;
+
+    .text-blue {
+      color: #18b0ff;
+    }
+    .text-rose {
+      color: #ff2473;
+    }
+    .text-green {
+      color: #40a737;
+    }
+  }
+  //   TODO BOARD
+  .card-board {
+    background-color: #19293c;
+  }
+  .task-card {
+    background-color: #132133;
+  }
+  // TODO SETTINGS
+  .card-themes-settings {
+    background-color: #2d3f55;
+  }
+  //   TODO NAVBAR
+  .button-close-sidebar {
+    background-color: #1d324b;
+  }
+  //   TODO SIDEBAR
+  .bg-sidebar {
+    background-color: #192330;
+  }
+  .todo-sidebar-container {
+    box-shadow: 5px 0px 11px 3px rgba(0, 0, 0, 0.1);
+  }
+  .todo-sidebar-nav-button {
+    color: #a5a5a5;
+    &.active {
+      background-color: #121923 !important;
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: #1219235e;
+    }
+  }
+}

@@ -30,8 +30,11 @@ body {
   height: 100%;
   margin: 0;
   font-family: Mulish;
+}
 
-  --mdc-dialog-container-color: #ffffff;
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
 }
 
 .mat-mdc-form-field-subscript-wrapper {
@@ -49,10 +52,6 @@ body {
 // N A V B A R
 .todo-input-search {
   @apply flex items-center gap-2;
-  .todo-input-search-icon,
-  input {
-    color: #a5a5a5;
-  }
   input {
     @apply font-semibold text-sm;
   }
@@ -66,18 +65,9 @@ body {
 .todo-sidebar-container {
   height: 100%;
   position: absolute;
-  box-shadow: 5px 0px 11px 3px rgba(0, 0, 0, 0.1);
 }
 .todo-sidebar-nav-button {
   @apply flex items-center gap-2 py-1 pr-4 pl-12 cursor-pointer w-full;
-  color: #a5a5a5;
-  &.active {
-    background-color: #ecf4fd !important;
-    color: #000000;
-  }
-  &:hover {
-    background-color: #ecf4fd;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -130,12 +120,4 @@ body {
   .sidebar-close {
     @apply -left-[250px];
   }
-}
-
-//TODO <-------- C O L O R S ------------->
-.text-color-primary {
-  color: #080808;
-}
-.text-color-secondary {
-  color: #a5a5a5;
 }

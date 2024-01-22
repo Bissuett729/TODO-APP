@@ -1,0 +1,18 @@
+<div class="flex items-center justify-center w-full h-full">
+    <div class="px-4 py-2 bg-[#15191d] rounded-md mat-elevation-z4 flex flex-col gap-3">
+        <div class="w-full flex items-center justify-center"><span class="text-xl font-bold tracking-widest text-white">LOGIN</span></div>
+        <form [formGroup]="signinFormGroup" class="flex flex-col items-center gap-4">
+            <div class="flex items-center gap-1 bg-[#20272d] p-1 rounded-md">
+                <i class="ri-shield-user-line text-white"></i>
+                <input formControlName="username" type="text" class="outline-none bg-inherit text-white/90 px-2" placeholder="Username">
+            </div>
+            <div class="flex items-center gap-1 bg-[#20272d] p-1 rounded-md">
+                <i class="ri-lock-2-line text-white"></i>
+                <input formControlName="password" type="password" class="outline-none bg-inherit text-white/90 px-2" placeholder="Password">
+            </div>
+        </form>
+        <div class="flex items-center justify-center">
+            <button [disabled]="signinFormGroup.invalid" [ngClass]="signinFormGroup.invalid ? 'bg-[#1a1f25] text-white/80' : 'bg-[#0d263c] text-white'" class="py-1 px-4 relative active:top-[1px] rounded-md" (click)="validateUser()">Sig in</button>
+        </div>
+    </div>
+</div>
