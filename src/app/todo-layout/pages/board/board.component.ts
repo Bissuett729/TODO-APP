@@ -28,6 +28,10 @@ export class BoardComponent implements OnInit {
   public signalService = inject(SignalsService);
   public _user = toSignal(this.signalService.userData$);
 
+  public todoData: any = [];
+  public progressData: any = [];
+  public doneData: any = [];
+
 
   constructor(public dialog: MatDialog, private RequestSRC: RequestsService) {}
   
@@ -52,6 +56,16 @@ export class BoardComponent implements OnInit {
   getAllTickets() {
     this.RequestSRC.methodGET('/v1/todo-api/tasks/get_all_tasks').subscribe((resp:any)=>{
       console.log('Get all task ===>',resp); 
+
+      const respData = resp;
+
+      this.todoData = respData.filter((task:any)=> task.status === 'todo');
+      this.progressData = respData.filter((task:any)=> task.status === 'progress');
+      this.doneData = respData.filter((task:any)=> task.status === 'done');
+
+      console.log('this.todoData', this.todoData);
+      console.log('this.progressData', this.progressData);
+      console.log('this.doneData', this.doneData);
     })
   }
 

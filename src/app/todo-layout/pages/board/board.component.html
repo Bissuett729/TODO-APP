@@ -10,27 +10,27 @@
         <div class="col-span-1 card-board h-full rounded-md px-4 py-2 flex flex-col gap-4 overflow-y-auto">
             <app-option-tasks [showButtonAdd]="true" title="To do" (menuClick)="setModeTodo($event)"></app-option-tasks>
             <div class="flex flex-col gap-3 px-2">
-                <app-task [viewMode]="todoViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
-                <app-task [viewMode]="todoViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
-                <app-task [viewMode]="todoViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
+                @for (todo of todoData; track $index) {
+                    <app-task [viewMode]="todoViewMode" [title]="todo.title" [content]="todo.description" [typeTask]="todo.type"></app-task>
+                }
             </div>
         </div>
 
         <div class="col-span-1 card-board h-full rounded-md px-4 py-2 flex flex-col gap-4 overflow-y-auto">
             <app-option-tasks [showButtonAdd]="false" title="In progress" (menuClick)="setModeprogress($event)"></app-option-tasks>
             <div class="flex flex-col gap-3 px-2">
-                <app-task [viewMode]="progressViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
-                <app-task [viewMode]="progressViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
-                <app-task [viewMode]="progressViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
+                @for (todo of progressData; track $index) {
+                    <app-task [viewMode]="progressViewMode" [title]="todo.title" [content]="todo.description" [typeTask]="todo.type"></app-task>
+                }
             </div>
         </div>
 
         <div class="col-span-1 card-board h-full rounded-md px-4 py-2 flex flex-col gap-4 overflow-y-auto">
             <app-option-tasks [showButtonAdd]="false" title="Done" (menuClick)="setModedone($event)"></app-option-tasks>
             <div class="flex flex-col gap-3 px-2">
-                <app-task [viewMode]="doneViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="typographic"></app-task>
-                <app-task [viewMode]="doneViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="design"></app-task>
-                <app-task [viewMode]="doneViewMode" [title]="titleExample" [content]="descriptionExample" typeTask="development"></app-task>
+                @for (todo of doneData; track $index) {
+                    <app-task [viewMode]="doneViewMode" [title]="todo.title" [content]="todo.description" [typeTask]="todo.type"></app-task>
+                }
             </div>
         </div>
     </div>

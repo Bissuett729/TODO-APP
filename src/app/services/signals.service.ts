@@ -11,6 +11,8 @@ export class SignalsService {
   public ThemeMode$ = toObservable(this.ThemeMode);
   public userData = signal<any>([]);
   public userData$ = toObservable(this.userData);
+  currentIp = signal('' + document.location.protocol + '//' + document.location.hostname + ':');
+  currentIp$ = toObservable(this.currentIp);
 
   public setOpenSidebar(statusSidebar: boolean) {
     this.openSidebar.set(statusSidebar);
